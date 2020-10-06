@@ -37,7 +37,7 @@ client.connect(err => {
     app.post('/addRegister', (req, res) => {
         const newRegister = req.body;
         volunteerTasksCollection.insertOne(newRegister)
-        .then(result => 
+        .then(result =>
             res.send(result.insertedCount > 0));
         console.log(newRegister);
     })
